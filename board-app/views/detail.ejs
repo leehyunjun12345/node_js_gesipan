@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title><%= post.title %></title>
+</head>
+<body>
+  <h1><%= post.title %></h1>
+  <p><%= post.content %></p>
+
+  <form action="/posts/<%= post.id %>/edit" method="get" style="display:inline;">
+    <button type="submit">수정</button>
+  </form>
+  <form action="/posts/<%= post.id %>/delete" method="post" style="display:inline;">
+    <button type="submit">삭제</button>
+  </form>
+
+  <br><br>
+  <a href="/">목록으로</a>
+</body>
+</html>
